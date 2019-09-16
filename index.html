@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,616 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
+
 <body>
     <main class="container">
-
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <!-- formulario -->
+                <form id="questionario">
+                    <!-- barra de progresso -->
+                    <ul id="barra_progresso">
+                        <li class="active">Introdução</li>
+                        <li>Administrativo-financeiro</li>
+                        <li>Clientes</li>
+                        <li>Pessoas</li>
+                        <li>Marketing e Vendas</li>
+                        <li>Processo e Ambiente</li>
+                        <li>Produção</li>
+                    </ul>
+                    <!-- fieldsets -->
+                    <fieldset>
+                        <h2 class="titulo_etapa">Introdução</h2>
+                        <h3 class="subtitulo_etapa">Informe os dados abaixo</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="responsavel">Responsável</label>
+                                <input type="text" name="responsavel" class="form-control input-lg" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" class="form-control input-lg" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cnpj">CNPJ</label>
+                                <input type="text" name="cnpj" data-mask="00.000.000/0000-00"
+                                    class="form-control input-lg" required>
+                            </div>
+                        </div>
+                        <p>
+                            <br>
+                            Responda as perguntas a seguir pensando em uma escala de 1 a 5, em que 1 é <b>Não atende a
+                                pergunta</b> e 5 é <b>Atende totalmente a pergunta</b>, como avalia sua empresa nos
+                            diversos setores. <b>SEJA SINCERO!</b></p>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão Administrativo-financeiro</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>1.1 A missão e a visão da empresa estão definidas e são conhecidas pelos colaboradores? "A
+                            Missão da empresa formaliza a razão de sua existência, define porque ela existe e a visão da
+                            empresa estabelece onde ela deseja estar num futuro definido".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.2 A empresa dispõe de algum regulamento interno? "O comportamento ético na empresa significa a transparência nas suas relações, o respeito aos clientes, colaboradores e fornecedores da empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.3 As finanças da empresa são controladas diariamente, através de uma rotina de fechamento de caixa e/ou alimentação de um fluxo de caixa, a fim de otimizar a utilização dos recursos? "Fluxo de Caixa é um Instrumento que projeta e registra todas as entradas e as saídas de recursos financeiros da empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.4 A empresa tem controle do contas a pagar e contas a receber? "Contas a pagar são as obrigações financeiras que a empresa assume com seus fornecedores e funcionários. Contas a receber é a quantia de dinheiro que devem para a empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.5 Existe controle de custo de mercadoria vendida, ou custo variável? "O CMV é a soma das despesas para produzir aquela mercadoria, até que a venda seja realizada. Esse dado é importante para você conseguir calcular e dimensionar o lucro".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.6 Existe controle de atualização de preço de venda de produção próprio (ficha técnica) e produtos de revenda? "Os preços dos itens vendidos necessitam de uma atualização diária, para evitar colocar o valor acima ou abaixo do mercado e do custo".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.7 Os fornecedores da empresa são selecionados e avaliados com critérios definidos? "A qualidade dos serviços prestados e dos produtos fornecidos aos clientes depende diretamente da qualidade dos materiais e dos serviços adquiridos".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>1.8 A empresa executa e analisa o ROP – Resultado Operacional por período, identificando a lucratividade do negócio? "O Resultado Operacional representa a resumo do resultado da empresa, com suas respectivas operações de custos variáveis e despesas operacionais, chegando-se à lucratividade".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão de Clientes</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>2.1 As reclamações dos clientes são registradas e tratadas? "O registro e tratamento das reclamações consiste na pronta solução de problemas junto ao cliente diariamente, evitando repetições de problemas e melhorando a fidelização de clientes".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>2.2 Existe alguma programação de rotina para limpeza de cada setor? "Uma rotina de limpeza adequada, é essencial para o bem-estar de todos que frequentam os espaços. Um ambiente organizado e higiênico causa uma sensação agradável aos clientes, fornecedores e colaboradores. Reduzindo o estresse e melhorando a produtividade".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>2.3 Existe algum controle na exposição e reposição de produtos de produção própria e revenda na área de vendas? "A existência de controle na exposição e reposição de produtos auxilia na fidelização do cliente e na melhoria do ticket médio da empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>2.4 Existe alguma técnica de layout das prateleiras da loja, com estratégia de atração de clientes? "Layout é uma expressão inglesa que serve para designar o plano que será utilizado para desenvolver um conteúdo da empresa, facilitando o processo de trabalho e de visualização do produto, impactando diretamente nas vendas da empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão de Pessoas</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>3.1 O bem-estar e a satisfação dos colaboradores são promovidos e avaliados? "As condições adequadas para o trabalho, não apenas com relação à saúde e segurança, mas também quanto ao conforto nos postos de trabalho, propiciam bem-estar e satisfação no trabalho e com a empresa".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>3.2 A empresa estabelece plano de metas e remuneração variável para a equipe? "A remuneração condicionada ao resultado estimula a equipe a busca continua da melhoria dos resultados apresentados, eliminando da zona de conforto".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>3.3 O Recrutamento e seleção dos colaboradores é feita segundo padrões definidos e considera os requisitos da função? "A seleção dos colaboradores tem o objetivo de preencher as funções vagas com pessoas aptas a executar as responsabilidades da função".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>3.4 A empresa costuma reunir sua equipe ou pelo menos os líderes para debater e avaliar o desempenho na realização das tarefas? "As reuniões são momentos importantes para o alinhamento do trabalho, exemplo de metas, objetivos e estratégias, além de sanar problemas entre o grupo".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>3.5 Há alguma forma de treinamento estabelecida ou estruturada pela empresa para a equipe de atendimento? "A capacitação dos colaboradores objetiva o desenvolvimento de conhecimentos, habilidades e atitudes que permitem o correto desempenho da função, promovendo, a eficiência da equipe de trabalho".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>3.6 A empresa realiza esforços para inovar? "Inovação é a implementação de um produto (bem ou serviço), novo ou significativamente melhorado, de um novo processo de trabalho (equipes, materiais e equipamentos), ou novo método de gerenciamento, ou ainda, características de negócios criativos, modificadas para melhorar o desempenho".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão de Marketing e Vendas</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>4.1 Realiza algum tipo de pesquisas de mercado, envolvendo clientes e concorrentes? "A pesquisa de mercado é o processo de coleta de dados dos consumidores e concorrentes para determinar se um produto ou serviço irá satisfazer as necessidades de seus clientes em uma determinada região ou segmentação mercadológica".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>4.2 Existe algum tipo de planejamento para as ações promocionais, principalmente de lançamento de produtos e eventos com datas comemorativas? "Um plano de ação promocional é um escopo de estratégias de divulgação que visam expandir a aceitação de uma marca, produto ou serviço".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>4.3 Existe algum conhecimento e ação relativo ao tíquete médio da empresa? "Ticket médio é um indicador de performance de vendas. A palavra “ticket” se refere ao valor gasto em um compra (como o valor impresso no ticket de um supermercado, por exemplo). Assim, o ticket médio pode ser calculado em função do valor monetário das vendas totais de uma empresa divididas pelo número de vendas".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>4.4 A empresa investe em algum tipo de marketing para o negócio, com plano definido? Se sim, qual? "Marketing é um conjunto de ações cujo objetivo é gerar visibilidade. Podem se beneficiar delas empresas e marcas, assim como seus produtos e serviços".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão de Processos e Ambiente</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>5.1 A empresa realiza algum processo de avaliação para observar se os procedimentos de organização, higiene e limpeza estão de acordo com o que as exigências legais, incluindo o Manual de Boas Práticas de Fabricação? "Avaliação de desempenho é um processo de extrema importância para a empresa, pois, além de estabelecer resultados a serem buscados, também acompanha o processo de trabalho e fornece um feedback para todas as partes envolvidas".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>5.2 Existe algum acompanhamento dos gestores sobre os pedidos e o que foi efetivamente recebido e estocado, com local de armazenamento adequado? "O gerenciamento de pedidos possui um forte impacto na gestão financeira da empresa, pois auxilia, principalmente, nos custos de aquisição dos produtos e no prazo de pagamento".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>5.4 A empresa realiza alguma prática de Responsabilidade Social na gestão do negócio? "A responsabilidade Social permeia o dia a dia das pessoas e das empresas e está diretamente vinculada ao sucesso do negócio e ao desenvolvimento Sustentável".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="button" name="proximo" class="proximo action-button" value="Próximo" />
+                    </fieldset>
+                    <fieldset>
+                        <h2 class="titulo_etapa">Gestão de Produção</h2>
+                        <!-- Pergunta do formulário -->
+                        <p>6.1 A empresa dispõe de pré-pesagem ou planeja de algumas forma a quantidade de matéria-prima que será utilizada a cada dia, de acordo com os produtos que fabrica? "O sistema de planejamento, programação e controle da produção (PPCP), consiste em uma área da manufatura, onde o objetivo principal dá-se tanto no planejamento quanto no controle dos recursos do processo produtivo, com o objetivo de transformar tais informações em ordens de fabricação".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>6.2 Existe algum conhecimento e controle sobre as perdas e desperdícios e ocorridos na empresa? "As perdas e desperdícios geram um impacto financeiro no custo variável da empresa, podendo até a inviabilizar a operação".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>6.3 Existe alguma divisão elaborada das tarefas de trabalho para cada colaborador, sabendo o que fazer diariamente? "Divisão do trabalho corresponde à especialização de tarefas com funções específicas, com finalidade de dinamizar e otimizar a produção, gerando eficiência e rapidez ao sistema produtivo".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>6.4 A empresa dispõe de gestão de estoque de matéria-prima, produtos para revenda e produtos acabados? "O controle de estoque é um procedimento de extrema importância, essencial para que qualquer empresa possua domínio sobre as suas movimentações e necessidades dentro do seu acervo, tanto na parte de compra quanto de venda".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>6.5 A empresa existe algum Procedimento Operacional Padronizado – POP no processo produtivo (receituário e modo de fazer), com ajuste quando necessário? "Uma ferramenta muito simples que compõe a área da qualidade, pois apresenta um objetivo básico que é o de garantir, mediante uma padronização, os resultados esperados por cada tarefa executada".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Pergunta do formulário -->
+                        <p>6.6 A empresa se preocupa e investe na capacitação dos colaboradores da produção, com estimulados adequados para os colaboradores participarem? "O investimento em capacitação dos colaboradores deve fazer parte do planejamento estratégico de toda empresa, pois através dele que a empresa incentiva a inovação, melhora a produtividade, construí vantagens competitivas e até retém talentos para o negócio".</p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <select name="" id="" class="form-control input-lg"
+                                    aria-placeholder="Escolha uma resposta">
+                                    <option value="0">Escolha uma resposta</option>
+                                    <option value="1">1 - Não atende a pergunta.</option>
+                                    <option value="2">2 - Quase não atende a pergunta.</option>
+                                    <option value="3">3 - Atende parcialmente a pergunta.</option>
+                                    <option value="4">4 - Atende bastante a pergunta</option>
+                                    <option value="5">5 - Atende totalmente a pergunta</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Botões de próximo e anterior -->
+                        <input type="button" name="anterior" class="anterior action-button" value="Anterior" />
+                        <input type="submit" name="submit" class="submit action-button" value="Enviar" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </main>
+
+    <!-- Gráfico das respostas -->
+    <div class="container" hidden>
+        <div class="row">
+            <article class="col-md-offset-2 col-md-8">
+                <canvas id="resultado"></canvas>
+            </article>
+        </div>
+        <!-- Textos das respostas -->
+        <div class="row">
+            <article class="col-md-offset-2 col-md-8">
     
+            </article>
+        </div>
+    </div>
+
     <!-- Javascript -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.min.js"></script>
+    <script src="assets/js/jquery.mask.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.bundle.2.8.0.min.js"></script>
     <script src="assets/js/all.js"></script>
+
+    <script type="text/javascript">
+        // Delimita contexto do gráfico
+        let ctx = document.getElementById('resultado').getContext('2d');
+
+        // Parametros do gráfico
+        let resultado = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
 </body>
+
 </html>

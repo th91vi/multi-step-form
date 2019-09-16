@@ -1,0 +1,199 @@
+/*google font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  font-family: montserrat, arial, verdana;
+  background-color: #f2f2f2;
+}
+/*estilos do formulario*/
+#questionario {
+  width: auto;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#questionario fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*empilhando os fieldsets*/
+  position: relative;
+}
+/*esconde todos os fieldsets menos o primeiro*/
+#questionario fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#questionario input,
+#questionario textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
+}
+/*botoes*/
+#questionario .action-button {
+  width: 100px;
+  background: #27ae60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  filter: brightness(0.8);
+  transition: filter 0.15s;
+}
+#questionario .action-button:hover,
+#questionario .action-button:focus {
+  filter: brightness(1);
+}
+#questionario .submit {
+  background: #ff7d33;
+  filter: brightness(0.8);
+  transition: filter 0.15s;
+}
+#questionario .submit:hover,
+#questionario .submit:focus {
+  filter: brightness(1);
+}
+/* tipografia */
+p {
+  text-align: justify;
+  font-size: 16px;
+  margin-top: 48px;
+}
+.form-control {
+  text-align: center;
+}
+/*cabecalhos*/
+.titulo_etapa {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.subtitulo_etapa {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*barra_progresso*/
+#barra_progresso {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS conta o numero de passos*/
+  counter-reset: step;
+}
+#barra_progresso li {
+  list-style-type: none;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 14.2%;
+  float: left;
+  position: relative;
+}
+#barra_progresso li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*barra_progresso conectores*/
+#barra_progresso li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*coloca os conectores atras dos numeros*/
+}
+#barra_progresso li:first-child:after {
+  /*retira o conector do primeiro item*/
+  content: none;
+}
+/*marcando os itens e conectores completados como verde*/
+#barra_progresso li.active:before,
+#barra_progresso li.active:after {
+  background: #27ae60;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /*barra_progresso*/
+  #barra_progresso {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS conta o numero de passos*/
+    counter-reset: step;
+  }
+  #barra_progresso li {
+    list-style-type: none;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 100%;
+    float: none;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  #barra_progresso li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+  }
+  /*barra_progresso conectores*/
+  #barra_progresso li:after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    z-index: -1; /*coloca os conectores atras dos numeros*/
+  }
+  #barra_progresso li:first-child:after {
+    /*retira o conector do primeiro item*/
+    content: "";
+  }
+  #barra_progresso li:last-child:after {
+    /*retira o conector do primeiro item*/
+    content: none;
+  }
+  /*marcando os itens e conectores completados como verde*/
+  #barra_progresso li.active:before,
+  #barra_progresso li.active:after {
+    background: #27ae60;
+    color: white;
+  }
+}
